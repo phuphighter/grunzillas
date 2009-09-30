@@ -1,0 +1,76 @@
+
+  <div id="content_wrapper">
+
+  <%= render :partial => "header" %>
+
+    <div id="content">
+
+      <div id="record_summary">
+        <p id="default">The Grunzillas are a softball team in the Dallas/Fort Worth area.</p>  
+        <p id="default">We currently have <span style="color:#ff6600"><%= pluralize(Game.sum(:win), "wins") %> and <%= pluralize(Game.sum(:loss), "losses") %></span>* on the season. Don't hate.</p>
+        <p id="default">If you don't know the Grunzilla himself, click <%= link_to "Here", '/images/grunz1.jpg' %>!</p>
+        <p style="font-size:11px; padding-left:10px; font-style:italic;">*Grunz will make his debut appearance on 6/30/2009.</p>
+      </div>
+
+      <div id="games">
+
+        <h2 id="default"><%= @games.group_by(&:season)[1].collect(&:season_description).uniq.first unless @games.blank? %></h2><br />
+        <table class="games_index">
+          <tr>
+            <th class="headers">Game</th>
+            <th class="headers">Date</th>
+            <th class="headers">Score</th>
+            <th class="headers">Opponent</th>
+            <th class="headers">Win</th>
+            <th class="headers">Loss</th>
+          </tr>
+
+        <% @games.each do |game| %>
+          <tr>
+            <td class="games_index"><h3><%= link_to "#{game.game_number}", game %></h3></td>
+            <td class="games_index"><%=h game.date %></td>
+            <td class="games_index"><%=h game.score %></td>
+            <td class="games_index"><%=h game.opponent_score %></td>
+            <td class="games_index"><%=h game.win %></td>
+            <td class="games_index"><%=h game.loss %></td>
+          <% if current_user %>
+            <td><%= link_to 'Show', game %></td>
+            <td><%= link_to 'Edit', edit_game_path(game) %></td>
+            <td><%= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete %></td>
+          <% end %>
+          </tr>
+        <% end %>
+
+          <tr>
+            <th class="headers">Games</th>
+            <th class="headers"></th>
+            <th class="headers">Runs For</th>
+            <th class="headers">Runs Against</th>
+            <th class="headers">Wins</th>
+            <th class="headers">Losses</th>
+          </tr>
+
+          <tr>
+            <td class="games_index"><%=h Game.count(:date) %></td>
+            <td class="games_index"></td>
+            <td class="games_index"><%=h Game.sum(:score) %></td>
+            <td class="games_index"><%=h Game.sum(:opponent_score) %></td>
+            <td class="games_index"><%=h Game.sum(:win) %></td>
+            <td class="games_index"><%=h Game.sum(:loss) %></td>
+          </tr>
+        </table>
+
+         <% if current_user %>
+           <%= link_to 'New game', new_game_path %>
+         <% end %>
+
+      </div>
+
+      <div id="statistics_index">
+        <%= render :partial => "season_statistics" %>
+      </div>
+
+    </div>
+  </div>
+
+<%= render :partial => "footer" %>

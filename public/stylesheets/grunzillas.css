@@ -1,0 +1,352 @@
+body { 
+/*  background: #F7F3E7;*/
+  background:#b6b3ac url(/images/background.png) repeat-x scroll 0 0;
+  color: #51504d; 
+  font-family:Arial,sans-serif;
+  font-size:0.85em;
+  line-height:1.4em;
+}
+
+* {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1#default {
+  font-family:Georgia,serif;
+  font-size: 30px;
+  letter-spacing:-1px;
+  margin: 0;
+}
+
+h2#default {
+  font-family:Georgia,serif;
+  font-size: 24px;
+  letter-spacing:-1px;
+  margin: 0;
+}
+
+p#default {
+  padding: 8px;
+  margin: 0;
+}
+
+p#default a { color: #555; }
+p#default a:visited { color: #555; }
+p#default a:hover { color: #ee6600; background-color:transparent }
+
+table {
+  border-spacing:  0px;
+  padding: 10px 0px 10px 0px;
+  float: left;
+  position: relative;
+  *border-collapse: collapse; /* hack is needed for IE7 also */
+}
+
+table.games_index {
+  border-spacing: 0px;
+  padding: 0px 20px 10px 5px;
+  margin: 0px 0px 10px 20px;
+  width: 600px;
+  text-align:left;
+}
+
+table.season_statistics {
+  border-spacing: 0px;
+  padding: 0px 0px 10px 20px;
+  width:100%;
+}
+
+td.games_index {
+  padding:5px;
+}
+
+th.headers {
+  border-top-color: transparent;
+  border-left-color: #dcdcdc;
+  border-right-color: #dcdcdc;
+  border-bottom-color: #dcdcdc;
+  border-bottom-style: solid;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 3px;
+  border-spacing:  0px;
+  text-align: left;
+  padding: 5px;
+  background-color: transparent;
+}
+
+td.stats {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-spacing:  0px;
+  text-align: left;
+  padding: 5px;
+  background-color: transparent;
+}
+
+tr.odd {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-spacing:  0px;
+  text-align: left;
+  padding: 5px;
+  background-color: #dcdcdc;
+  position: relative;
+}
+
+tr.even {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-spacing:  0px;
+  text-align: left;
+  padding: 5px;
+  background-color: white;
+  position: relative;
+}
+
+#content_wrapper {
+  background-color:#FFF;
+	min-height:1200px;
+  height: auto;
+	margin: 0 auto 0; /* the bottom margin is the negative value of the footer's height */
+  width: 950px;
+  text-align: center;
+  padding: 20px; 
+}
+
+#content {
+  position: relative;
+  text-align: left;
+  float:left;
+  clear:both;
+}
+
+#comments_content {
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  position: relative;
+  text-align: left;
+  background-color:#e1e1e1;
+  padding:20px;
+}
+
+#header {
+  position: relative;  
+  width: 950px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+#header_image {
+  border-style:none;
+  color:transparent;
+  position: relative;  
+/* background:transparent url(/images/mck_color_logo7.png) no-repeat;*/
+}
+
+#header_image a { color: transparent; border-style:none;}
+#header_image a:visited { color: transparent; }
+#header_image a:active { color: transparent; background-color:transparent }
+#header_image a:hover { color: transparent; background-color:transparent }
+
+#navbar {
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  width:100%;
+  background-color:#5bab00;
+  margin-bottom: 20px;
+  font-size:18px;
+  font-weight:bold;
+  color:#FFF;
+  padding: 7px 0px 7px 0px;
+}
+
+#navbar a { color: #FFF; text-decoration:none; }
+#navbar a:visited { color: #FFF; }
+#navbar a:active { color: #FFF; background-color:transparent }
+#navbar a:hover { color: #ff6600; background-color:transparent }
+
+#record_summary {
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border: #CCC 2px solid;
+  position:relative;
+  float:left;
+  padding: 10px;
+  margin-bottom:20px;
+  width:80%;
+  font-size:18px;
+  font-weight:bold;
+  clear:both;
+}
+
+#games {
+  width:700px;
+  height:100%;
+  position:relative;
+  float:left;
+}
+
+#statistics_index {
+  position:relative;
+  float:left;
+  width:100%;
+}
+
+#new_game {
+  width:620px;
+  height:100%;
+  position:relative;
+  float:left;
+}
+
+#show_game {
+  width:100%;
+  height:100%;
+  position:relative;
+  float:left;
+}
+
+#statistics {
+  position:relative;
+  float:left;
+}
+
+.statistic {
+  width:600px;
+  position:relative;
+  float:left;
+  padding:10px;
+  margin-bottom:10px;
+  background-color:#DDD;
+}
+
+.common_button {
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border:1px solid #ADADAD;
+  background-color:#f1eeee;
+  font-weight:bold;
+  font-size: 1em;
+  padding:4px 15px;
+  margin-top:10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.common_button:hover { background-color:#dcd9d9; }
+
+#comments {
+}
+
+.comment {
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-color: #FFF;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #FFF;
+  margin-bottom:15px !important;
+  padding:8px;
+  text-align: left;
+}
+
+.comment_textfield {
+  height: 18px;
+  width: 20%;
+  border:1px solid #ADADAD;
+  padding-top: 4px;
+  padding-left: 4px
+}
+
+.comment_textarea {
+  width: 90%;
+  height: 100px;
+  border:1px solid #ADADAD;
+  padding: 4px;
+}
+
+.comment_form {
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  background-color:#FFFFFF;
+  margin-top:12px !important;
+  margin-bottom:18px !important;
+  padding:0px 20px 20px 20px;
+  text-align: left;
+}
+
+.comment_form a { color: #27A7C8; }
+.comment_form a:visited { color: #27A7C8; }
+.comment_form a:hover { color: #ee6600; background-color:transparent }
+
+.details {
+  color:#51504d;
+  display:block;
+  font-size:85%;
+  height:18px;
+  padding-top:10px;
+}
+
+#footer, .push {
+  background-color:#5bab00;
+  overflow:hidden;
+  padding:24px 0;
+  height: 35px;
+  text-align: center;
+}
+
+p#footer_text {
+  font-size: 14px;
+  color: #FFF;
+  font-weight:bold;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+

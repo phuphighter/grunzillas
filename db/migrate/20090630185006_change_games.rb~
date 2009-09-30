@@ -1,0 +1,14 @@
+class ChangeGames < ActiveRecord::Migration
+  def self.up
+    change_table :games do |t|
+      t.integer :win
+      t.integer :loss
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :games
+  end
+end

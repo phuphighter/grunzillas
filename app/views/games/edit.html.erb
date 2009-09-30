@@ -1,0 +1,20 @@
+
+<div id="content_wrapper">
+
+  <div id="content">
+  <div id="new_game">
+
+<h1>Editing game</h1>
+
+<% form_for :game, :url => game_path(@game), :html => { :method => 'put' } do |f| %>
+  <%= render :partial => 'fields', :locals => { :f => f } %>
+  <p><%= submit_tag "Update Project" %></p>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @game %> |
+<%= link_to 'Back', games_path %>
+
+  </div>
+</div>
+</div>

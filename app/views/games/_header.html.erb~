@@ -1,0 +1,8 @@
+  <div id="header">
+
+    <div id="header_image"><%= link_to image_tag('/images/grunzillas_logo.png', :border => "0"), root_path %></div>
+  </div>
+
+    <div id="navbar">
+      <%= link_to 'Home', :root %> | <%= link_to 'Schedule', schedules_path %> | <%= link_to 'Games', games_games_path %> | <%= link_to 'Statistics', statistics_games_path %> | <%= link_to 'Smack', comments_path %> 
+    </div>

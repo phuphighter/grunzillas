@@ -1,0 +1,11 @@
+
+  <div class="push"/>
+
+<div id="footer">
+  <p id="footer_text">&copy 2009 Grunzillas     
+    <% if current_user %>
+      <span style="float:right;">| <%= link_to "Logout", logout_path %></span>
+    <% else %>
+      <span style="float:right;">| <%= link_to "Login", login_path %></span> 
+    <% end %></p>
+</div>

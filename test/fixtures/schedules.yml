@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2009-06-30
+  time: 2009-06-30 09:12:04
+  field: MyString
+  opponent: MyString
+
+two:
+  date: 2009-06-30
+  time: 2009-06-30 09:12:04
+  field: MyString
+  opponent: MyString

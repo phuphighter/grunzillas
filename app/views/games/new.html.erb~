@@ -1,0 +1,18 @@
+<div id="content_wrapper">
+
+  <div id="content">
+
+    <h1>New game</h1>
+
+    <% form_for :game, :url => games_path do |f| %>
+
+      <%= render :partial => 'fields', :locals => { :f => f } %>
+
+      <p><%= submit_tag "Create Game" %></p>
+
+    <% end %>
+
+    <p><%= link_to 'Back', games_path %></p>
+
+</div>
+</div>

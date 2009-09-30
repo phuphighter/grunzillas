@@ -1,0 +1,42 @@
+<div id="content_wrapper">
+
+<%= render :partial => "games/header" %>
+
+  <div id="comments_content">
+
+  <span style="float:right;"><%= will_paginate @comments %></span>
+  <h1 style="padding-bottom:20px; width: 50%; position:relative;">Comments</h1>
+
+  <div id="comments">
+      <% @comments.each do |comment|%>
+          <%= render :partial => "comment", :locals => { :comment => comment } %>        
+      <% end %>
+  </div>
+
+  <div class="comment_form">
+    <h3 id="default" style="padding:20px 0 20px 0;">Say Something!</h3>
+
+    <% remote_form_for :comment, :html => { :id => "comment_form" }, :url=> { :controller => "comments" } do |f| %>
+
+      <p id="default">
+        <label><b>Name: </b></label><br />
+        <%= f.text_field "name" %>
+      </p>
+      <p id="default">
+        <label><b>Email: </b></label><br />
+        <%= f.text_field "email" %>
+      </p>
+      <p id="default">
+        <label><b>Comment:</b></label><br />
+        <%= f.text_area "comment", :class => "comment_textarea" %><br>
+      </p>
+      <p id="default">
+        <%= submit_tag "Add Comment", :class => "common_button" %>
+      </p>
+    <% end %>
+  </div>
+
+    </div>
+  </div>
+
+<%= render :partial => "games/footer" %>

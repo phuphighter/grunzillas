@@ -1,0 +1,18 @@
+<h1>New Comment</h1>
+
+     <div class="comment_form">
+      <% remote_form_for @comments do |f| %>
+        <p id="default">
+          <label><b>Name: </b></label><%= text_field "name" %><br>
+        </p>
+        <p id="default">
+          <label><b>Comment:</b></label><br />
+          <%= f.text_area "comment", :class => "comment_textarea" %><br>
+        </p>
+        <p id="default">
+          <%= submit_tag "Add Comment", :class => "common_button" %>
+        </p>
+      <% end %>
+     </div>
+
+<%= link_to 'Back', comments_path %>

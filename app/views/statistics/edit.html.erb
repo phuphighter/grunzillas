@@ -1,0 +1,76 @@
+<h1>Editing statistic</h1>
+
+<% form_for(@statistic) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :game_id %><br />
+    <%= f.text_field :game_id %>
+  </p>
+  <p>
+    <%= f.label :lineup_order %><br />
+    <%= f.text_field :lineup_order %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :game %><br />
+    <%= f.text_field :game %>
+  </p>
+  <p>
+    <%= f.label :at_bats %><br />
+    <%= f.text_field :at_bats %>
+  </p>
+  <p>
+    <%= f.label :hits %><br />
+    <%= f.text_field :hits %>
+  </p>
+  <p>
+    <%= f.label :singles %><br />
+    <%= f.text_field :singles %>
+  </p>
+  <p>
+    <%= f.label :doubles %><br />
+    <%= f.text_field :doubles %>
+  </p>
+  <p>
+    <%= f.label :triples %><br />
+    <%= f.text_field :triples %>
+  </p>
+  <p>
+    <%= f.label :home_runs %><br />
+    <%= f.text_field :home_runs %>
+  </p>
+  <p>
+    <%= f.label :walks %><br />
+    <%= f.text_field :walks %>
+  </p>
+  <p>
+    <%= f.label :runs %><br />
+    <%= f.text_field :runs %>
+  </p>
+  <p>
+    <%= f.label :rbi %><br />
+    <%= f.text_field :rbi %>
+  </p>
+  <p>
+    <%= f.label :batting_average %><br />
+    <%= f.text_field :batting_average %>
+  </p>
+  <p>
+    <%= f.label :on_base_percentage %><br />
+    <%= f.text_field :on_base_percentage %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @statistic %> |
+<%= link_to 'Back', statistics_path %>

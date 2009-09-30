@@ -1,0 +1,59 @@
+<div class="statistic">
+  <% fields_for_statistic(statistic) do |statistic_form| %>
+
+  <p>
+    <%= statistic_form.label :lineup_order %><br />
+    <%= statistic_form.text_field :lineup_order %>
+  </p>
+  <p>
+    <%= statistic_form.label :last_name %><br />
+    <%= statistic_form.text_field :last_name %>
+  </p>
+  <p>
+    <%= statistic_form.label :first_name %><br />
+    <%= statistic_form.text_field :first_name %>
+  </p>
+  <p>
+    <%= statistic_form.label :game %><br />
+    <%= statistic_form.text_field :game %>
+  </p>
+  <p>
+    <%= statistic_form.label :at_bats %><br />
+    <%= statistic_form.text_field :at_bats %>
+  </p>
+  <p>
+    <%= statistic_form.label :hits %><br />
+    <%= statistic_form.text_field :hits %>
+  </p>
+  <p>
+    <%= statistic_form.label :singles %><br />
+    <%= statistic_form.text_field :singles %>
+  </p>
+  <p>
+    <%= statistic_form.label :doubles %><br />
+    <%= statistic_form.text_field :doubles %>
+  </p>
+  <p>
+    <%= statistic_form.label :triples %><br />
+    <%= statistic_form.text_field :triples %>
+  </p>
+  <p>
+    <%= statistic_form.label :home_runs %><br />
+    <%= statistic_form.text_field :home_runs %>
+  </p>
+  <p>
+    <%= statistic_form.label :walks %><br />
+    <%= statistic_form.text_field :walks %>
+  </p>
+  <p>
+    <%= statistic_form.label :runs %><br />
+    <%= statistic_form.text_field :runs %>
+  </p>
+  <p>
+    <%= statistic_form.label :rbi %><br />
+    <%= statistic_form.text_field :rbi %>
+  </p>
+
+    <%= link_to_function "remove", "$(this).up('.task').remove()" %>
+  <% end %>
+</div>

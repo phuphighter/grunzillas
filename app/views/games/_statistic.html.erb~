@@ -1,0 +1,62 @@
+<div class="statistic">
+  <h3>Players</h3>
+
+  <% fields_for_statistic(statistic) do |statistic_form| %>
+<span style="float:left; position:relative;">
+  <p>
+    <%= statistic_form.label :lineup_order %><br />
+    <%= statistic_form.text_field :lineup_order %>
+  </p>
+  <p>
+    <%= statistic_form.label :last_name %><br />
+    <%= statistic_form.text_field :last_name %>
+  </p>
+  <p>
+    <%= statistic_form.label :first_name %><br />
+    <%= statistic_form.text_field :first_name %>
+  </p>
+  <p>
+    <%= statistic_form.label :singles %><br />
+    <%= statistic_form.text_field :singles %>
+  </p>
+    <%= link_to_function "remove", "$(this).up('.statistic').remove()" %>
+</span>
+
+<span style="float:right; position:relative;">
+  <p>
+    <%= statistic_form.label :doubles %><br />
+    <%= statistic_form.text_field :doubles %>
+  </p>
+  <p>
+    <%= statistic_form.label :triples %><br />
+    <%= statistic_form.text_field :triples %>
+  </p>
+  <p>
+    <%= statistic_form.label :home_runs %><br />
+    <%= statistic_form.text_field :home_runs %>
+  </p>
+  <p>
+    <%= statistic_form.label :walks %><br />
+    <%= statistic_form.text_field :walks %>
+  </p>
+  <p>
+    <%= statistic_form.label :fielders_choice %><br />
+    <%= statistic_form.text_field :fielders_choice %>
+  </p>
+  <p>
+    <%= statistic_form.label :sac_fly %><br />
+    <%= statistic_form.text_field :sac_fly %>
+  </p>
+  <p>
+    <%= statistic_form.label :runs %><br />
+    <%= statistic_form.text_field :runs %>
+  </p>
+  <p>
+    <%= statistic_form.label :rbi %><br />
+    <%= statistic_form.text_field :rbi %>
+  </p>
+</span>
+
+
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+<p>
+  <b>Date:</b>
+  <%=h @schedule.datetime.to_s(:american_date) %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @schedule.datetime.to_s(:american_time) %>
+</p>
+
+<p>
+  <b>Field:</b>
+  <%=h @schedule.field %>
+</p>
+
+<p>
+  <b>Opponent:</b>
+  <%=h @schedule.opponent %>
+</p>
+
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

@@ -1,0 +1,17 @@
+development: 
+  adapter: mysql 
+  encoding: utf8 
+  database: grunzillas_development 
+  pool: 5 
+  username: 
+  password: 
+  socket: 
+  
+production: 
+  adapter: mysql 
+  encoding: utf8 
+  database: 
+  pool: 5 
+  username:
+  password: 
+  socket: 

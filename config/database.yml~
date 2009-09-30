@@ -1,0 +1,17 @@
+development: 
+  adapter: mysql 
+  encoding: utf8 
+  database: grunzillas_development 
+  pool: 5 
+  username: root 
+  password: midstream
+  socket: /var/lib/mysql/mysql.sock
+  
+production: 
+  adapter: mysql 
+  encoding: utf8 
+  database: phulogyc_grunzillas
+  pool: 5 
+  username: phulogyc_johnny
+  password: phukhai
+  socket: /tmp/mysql.sock

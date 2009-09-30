@@ -1,0 +1,37 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  game_id: 1
+  lineup_order: 1
+  last_name: MyString
+  first_name: MyString
+  game: 1
+  at_bats: 1
+  hits: 1
+  singles: 1
+  doubles: 1
+  triples: 1
+  home_runs: 1
+  walks: 1
+  runs: 1
+  rbi: 1
+  batting_average: 9.99
+  on_base_percentage: 9.99
+
+two:
+  game_id: 1
+  lineup_order: 1
+  last_name: MyString
+  first_name: MyString
+  game: 1
+  at_bats: 1
+  hits: 1
+  singles: 1
+  doubles: 1
+  triples: 1
+  home_runs: 1
+  walks: 1
+  runs: 1
+  rbi: 1
+  batting_average: 9.99
+  on_base_percentage: 9.99

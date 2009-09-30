@@ -1,0 +1,39 @@
+  <div id="content_wrapper">
+
+  <%= render :partial => "games/header" %>
+
+    <div id="content">
+
+    <h1 id="default">Schedule</h1><br />
+
+    <table class="season_statistics">
+      <tr>
+        <th class="headers">Date</th>
+        <th class="headers">Time</th>
+        <th class="headers">Field</th>
+        <th class="headers">Opponent</th>
+      </tr>
+
+    <% @schedules.each do |schedule| %>
+     <tr class ="<%= cycle("even","odd") %>">
+        <td class="stats"><%=h schedule.datetime.to_s(:american_date) %></td>
+        <td class="stats"><%=h schedule.datetime.to_s(:american_time) %></td>
+        <td class="stats"><%=h schedule.field %></td>
+        <td class="stats"><%=h schedule.opponent %></td>
+      <% if current_user %>
+        <td><%= link_to 'Show', schedule %></td>
+        <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
+        <td><%= link_to 'Destroy', schedule, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% end %>
+      </tr>
+    <% end %>
+    </table>
+
+    <br />
+
+    <!--<%= link_to 'New schedule', new_schedule_path %>-->
+
+    </div>
+  </div>
+
+<%= render :partial => "games/footer" %>

@@ -1,0 +1,14 @@
+<div class="comment">
+
+  <%=h comment.comment %> 
+
+  <div class="details"><p><%=h comment.created_at.to_s(:date_long) %> at <%=h comment.created_at.to_s(:american_time).downcase %> by <%=h comment.name %>
+
+    <% if current_user %>
+      | <%= link_to "Delete", comment, :confirm => 'Are you sure you want to delete this? It cannot be undone.', :method => :delete %>
+    <% end %>
+    </p></div>
+
+</div>
+
+

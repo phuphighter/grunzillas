@@ -1,0 +1,19 @@
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :score %><br />
+    <%= f.text_field :score %>
+  </p>
+  <p>
+    <%= f.label :opponent_score %><br />
+    <%= f.text_field :opponent_score %>
+  </p>
+
+<div id="statistics">
+  <%= render :partial => 'statistic', :collection => @game.statistics %>
+</div>
+
+<p style="padding-top:30px"><%= add_statistic_link "Add a Player" %></p>
+

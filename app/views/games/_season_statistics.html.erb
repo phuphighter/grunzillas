@@ -1,0 +1,49 @@
+
+  <h2 id="default">Season Stats</h2><br />
+
+  <table class="season_statistics">
+    <tr class="stat_header">
+      <th class="headers"><%= will_sort_link_helper "Last Name", "last_name"%></th>
+      <th class="headers"><%= will_sort_link_helper "First Name", "first_name"%></th>
+      <th class="headers"><%= will_sort_link_helper "Games", "games_played"%></th>
+      <th class="headers"><%= will_sort_link_helper "PA", "plate_apps"%></th>
+      <th class="headers"><%= will_sort_link_helper "AB", "at_bats"%></th>
+      <th class="headers"><%= will_sort_link_helper "Hits", "hits"%></th>
+      <th class="headers"><%= will_sort_link_helper "1B", "singles"%></th>
+      <th class="headers"><%= will_sort_link_helper "2B", "doubles"%></th>
+      <th class="headers"><%= will_sort_link_helper "3B", "triples"%></th>
+      <th class="headers"><%= will_sort_link_helper "HR", "home_runs"%></th>
+      <th class="headers"><%= will_sort_link_helper "BB", "walks"%></th>
+      <th class="headers"><%= will_sort_link_helper "FC", "fielders_choice"%></th>
+      <th class="headers"><%= will_sort_link_helper "SF", "sac_fly"%></th>
+      <th class="headers"><%= will_sort_link_helper "Runs", "runs"%></th>
+      <th class="headers"><%= will_sort_link_helper "RBIs", "rbi"%></th>
+      <th class="headers"><%= will_sort_link_helper "Batting Avg", "batting_average"%></th>
+      <th class="headers"><%= will_sort_link_helper "On Base %", "on_base" %></th>
+    </tr>
+
+  <% @statistics.each do |statistic| %>
+    <tr class ="<%= cycle("even","odd") %>">
+      <td class="stats"><%= link_to "#{statistic.last_name}", stats_statistics_path(:last_name => statistic.last_name) %></td>
+      <td class="stats"><%=h statistic.first_name %></td>
+      <td class="stats"><%=h statistic.games_played %></td>
+      <td class="stats"><%=h statistic.plate_apps %></td>
+      <td class="stats"><%=h statistic.at_bats %></td>
+      <td class="stats"><%=h statistic.hits %></td>
+      <td class="stats"><%=h statistic.singles %></td>
+      <td class="stats"><%=h statistic.doubles %></td>
+      <td class="stats"><%=h statistic.triples %></td>
+      <td class="stats"><%=h statistic.home_runs %></td>
+      <td class="stats"><%=h statistic.walks %></td>
+      <td class="stats"><%=h statistic.fielders_choice %></td>
+      <td class="stats"><%=h statistic.sac_fly %></td>
+      <td class="stats"><%=h statistic.runs %></td>
+      <td class="stats"><%=h statistic.rbi %></td>
+      <td class="stats"><%=h number_with_precision(statistic.batting_average, :precision => 3) %></td>
+      <td class="stats"><%=h number_with_precision(statistic.on_base, :precision => 3) %></td>
+    </tr>
+  <% end %>
+  </table>
+  
+ <p style="font-style:italic";>*Stats from first two games are from memory, so they are skewed.  Especially Fielder's Choice, Sac Fly, and RBIs.</p>
+

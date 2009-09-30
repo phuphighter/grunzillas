@@ -1,0 +1,4 @@
+id,season,season_description,game_number,date,score,opponent_score,win,loss,created_at,updated_at
+1,1,Summer I 2009,1,2009-06-09,4,16,0,1,2009-06-25 19:16:13,2009-06-29 17:47:30
+2,1,Summer I 2009,2,2009-06-09,7,22,0,1,2009-06-25 19:16:56,2009-06-29 17:47:30
+3,1,Summer I 2009,3,2009-06-16,10,12,0,1,2009-06-25 19:52:41,2009-06-29 17:47:30

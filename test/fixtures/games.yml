@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2009-06-25
+  score: 1
+  opponent_score: 1
+
+two:
+  date: 2009-06-25
+  score: 1
+  opponent_score: 1

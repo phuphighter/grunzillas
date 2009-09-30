@@ -1,0 +1,54 @@
+
+  <div id="content_wrapper">
+
+  <%= render :partial => "games/header" %>
+
+    <div id="content">
+
+  <h2><%= @stats_by_name.collect(&:first_name).first %> <%= @stats_by_name.collect(&:last_name).first %></h2>
+
+  <table class="season_statistics">
+    <tr class="stat_header">
+      <th class="headers">Game</th>
+      <th class="headers">PA</th>
+      <th class="headers">AB</th>
+      <th class="headers">Hits</th>
+      <th class="headers">1B</th>
+      <th class="headers">2B</th>
+      <th class="headers">3B</th>
+      <th class="headers">HR</th>
+      <th class="headers">BB</th>
+      <th class="headers">FC</th>
+      <th class="headers">SF</th>
+      <th class="headers">Runs</th>
+      <th class="headers">RBIs</th>
+      <th class="headers">Batting Avg</th>
+      <th class="headers">On Base %</th>
+    </tr>
+
+  <% @stats_by_name.each do |statistic| %>
+    <tr class ="<%= cycle("even","odd") %>">
+      <td class="stats"><%=h statistic.game.game_number %></td>
+      <td class="stats"><%=h statistic.plate_apps %></td>
+      <td class="stats"><%=h statistic.at_bats %></td>
+      <td class="stats"><%=h statistic.hits %></td>
+      <td class="stats"><%=h statistic.singles %></td>
+      <td class="stats"><%=h statistic.doubles %></td>
+      <td class="stats"><%=h statistic.triples %></td>
+      <td class="stats"><%=h statistic.home_runs %></td>
+      <td class="stats"><%=h statistic.walks %></td>
+      <td class="stats"><%=h statistic.fielders_choice %></td>
+      <td class="stats"><%=h statistic.sac_fly %></td>
+      <td class="stats"><%=h statistic.runs %></td>
+      <td class="stats"><%=h statistic.rbi %></td>
+      <td class="stats"><%=h number_with_precision(statistic.batting_average, :precision => 3) %></td>
+      <td class="stats"><%=h number_with_precision(statistic.on_base_percentage, :precision => 3) %></td>
+   <% end %>
+  </table>
+
+  <%= link_to "Back", :back %>
+
+    </div>
+  </div>
+
+<%= render :partial => "games/footer" %>
